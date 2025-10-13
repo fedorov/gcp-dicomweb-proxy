@@ -7,7 +7,7 @@ const express = require('express');
 const cors = require('cors');
 const proxyMiddleware = require('http-proxy-middleware');
 
-const dicomURL = process.env.DICOMURL || 'https://healthcare.googleapis.com/v1/projects/idc-external-031/locations/us-central1/datasets/projectweek40/dicomStores/projectweek40-store/dicomWeb/';
+const dicomURL = process.env.DICOMURL || 'https://healthcare.googleapis.com/v1/projects/idc-external-031/locations/northamerica-northeast1/datasets/cirp-uw/dicomStores/cirp-uw-dicom/dicomWeb/';
 
 const app = express();
 app.use(cors());
@@ -45,7 +45,7 @@ function getToken() {
 }
 
 // Export the function that Cloud Functions will call
-exports.proxy = async (req, res) => {
+exports.cirp_uw_proxy = async (req, res) => {
   try {
     // Get token if we don't have one
     if (!token) {
