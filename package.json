@@ -4,7 +4,7 @@
   "description": "Run http-proxy-middleware to relay requests",
   "main": "index.js",
   "scripts": {
-    "deploy": "gcloud functions deploy proxy --runtime nodejs20 --trigger-http --memory=128 --timeout=60s"
+    "deploy": "gcloud functions deploy mhub_proxy --runtime nodejs20 --trigger-http --memory=128 --timeout=60s"
   },
   "dependencies": {
     "cors": "^2.8.5",
